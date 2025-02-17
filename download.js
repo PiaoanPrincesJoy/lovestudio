@@ -2,7 +2,7 @@ const finalCanvas = document.getElementById("finalCanvas");
 const ctx = finalCanvas.getContext("2d");
 const downloadBtn = document.getElementById("download-btn");
 const colorButtons = document.querySelectorAll(".color-btn");
-const capturedPhotos = document.getElementById("capturedPhotos");
+const photos = document.getElementById("capturedPhotos");
 
 let selectedFrameColor = "img/nude.png"; // Default frame
 
@@ -71,25 +71,25 @@ function drawLogo() {
 function applyFilter(filter) {
   switch (filter) {
     case 'none':
-      capturedPhotos.style.filter = 'none';
+      photos.style.filter = 'none';
       break;
     case 'grayscale':
-      capturedPhotos.style.filter = 'grayscale(100%)';
+      photos.style.filter = 'grayscale(100%)';
       break;
     case 'sepia':
-      capturedPhotos.style.filter = 'sepia(100%)';
+      photos.style.filter = 'sepia(100%)';
       break;
     case 'invert':
-      capturedPhotos.style.filter = 'invert(100%)';
+      photos.style.filter = 'invert(100%)';
       break;
     case 'blur':
-      capturedPhotos.style.filter = 'blur(5px)';
+      photos.style.filter = 'blur(5px)';
       break;
     case 'contrast':
-      capturedPhotos.style.filter = 'contrast(200%)';
+      photos.style.filter = 'contrast(200%)';
       break;
     default:
-      capturedPhotos.style.filter = 'none';
+      photos.style.filter = 'none';
   }
 }
 
