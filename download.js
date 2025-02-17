@@ -66,6 +66,32 @@ function drawLogo() {
     logo.onerror = () => console.error("Failed to load logo image.");
 }
 
+//function to apply filter
+function applyFilter(filter) {
+  switch (filter) {
+    case 'none':
+      photo.style.filter = 'none';
+      break;
+    case 'grayscale':
+      photo.style.filter = 'grayscale(100%)';
+      break;
+    case 'sepia':
+      photo.style.filter = 'sepia(100%)';
+      break;
+    case 'invert':
+      photo.style.filter = 'invert(100%)';
+      break;
+    case 'blur':
+      photo.style.filter = 'blur(5px)';
+      break;
+    case 'contrast':
+      photo.style.filter = 'contrast(200%)';
+      break;
+    default:
+      photo.style.filter = 'none';
+  }
+}
+
 // Change frame color and redraw instantly
 colorButtons.forEach(button => {
     button.addEventListener("click", (event) => {
