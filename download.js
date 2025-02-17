@@ -2,6 +2,7 @@ const finalCanvas = document.getElementById("finalCanvas");
 const ctx = finalCanvas.getContext("2d");
 const downloadBtn = document.getElementById("download-btn");
 const colorButtons = document.querySelectorAll(".color-btn");
+const photo = document.getElementById('finalCanvas');
 
 let selectedFrameColor = "img/nude.png"; // Default frame
 
